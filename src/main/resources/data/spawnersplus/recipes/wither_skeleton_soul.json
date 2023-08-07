@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:nether_star"
+    },
+    "S": {
+      "item": "spawnersplus:skeleton_soul"
+    }
+  },
+  "pattern": [
+    "###",
+    "#S#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "item": "spawnersplus:wither_skeleton_soul"
+  },
+  "show_notification": true
+}

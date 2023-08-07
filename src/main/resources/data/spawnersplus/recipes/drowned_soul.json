@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:heart_of_the_sea"
+    },
+    "S": {
+      "item": "spawnersplus:zombie_soul"
+    }
+  },
+  "pattern": [
+    "###",
+    "#S#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "item": "spawnersplus:drowned_soul"
+  },
+  "show_notification": true
+}

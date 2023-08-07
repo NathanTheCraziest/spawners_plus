@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "spawnersplus:block/inactive_spawner"
+    }
+  }
+}

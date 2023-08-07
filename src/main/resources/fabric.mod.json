@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "spawners_plus",
+  "version": "${version}",
+
+  "name": "Spawners+",
+  "description": "This mod expands mob spawners allowing you to create your own in survival! Inspired by Origin Realms",
+  "authors": [
+    "NathanTheCraziest"
+  ],
+  "contact": {
+    "homepage": "https://legacy.curseforge.com/minecraft/mc-mods/spawners-plus"
+  },
+
+  "license": "MIT",
+  "icon": "assets/spawnersplus/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.nathanthecraziest.spawnersplus.SpawnersPlus"
+    ],
+    "client": [
+      "net.nathanthecraziest.spawnersplus.SpawnersPlusClient"
+    ]
+  },
+  "mixins": [
+    "spawnersplus.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.19",
+    "fabric-api": "*",
+    "minecraft": ">=1.19.4",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

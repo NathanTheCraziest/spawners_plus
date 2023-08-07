@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "spawnersplus:spawner_fragment"
+    },
+    "S": {
+      "item": "minecraft:totem_of_undying"
+    }
+  },
+  "pattern": [
+    "###",
+    "#S#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "item": "spawnersplus:spawner_silencer"
+  },
+  "show_notification": true
+}
