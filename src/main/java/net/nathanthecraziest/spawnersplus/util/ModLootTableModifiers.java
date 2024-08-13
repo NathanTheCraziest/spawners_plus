@@ -35,7 +35,12 @@ public class ModLootTableModifiers {
     public static final Identifier CAVE_SPIDER_ID = EntityType.CAVE_SPIDER.getLootTableId();
     public static final Identifier BLAZE_ID = EntityType.BLAZE.getLootTableId();
     public static final Identifier MAGMA_CUBE_ID = EntityType.MAGMA_CUBE.getLootTableId();
+    public static final Identifier STRAY_ID = EntityType.STRAY.getLootTableId();
+    public static final Identifier WITHER_SKELETON_ID = EntityType.WITHER_SKELETON.getLootTableId();
     public static final Identifier HUSK_ID = EntityType.HUSK.getLootTableId();
+    public static final Identifier DROWNED_ID = EntityType.DROWNED.getLootTableId();
+
+
     public static void modifyLootTables(){
         LootTableEvents.MODIFY.register(((resourceManager, lootManager, id, tableBuilder, source) -> {
 
