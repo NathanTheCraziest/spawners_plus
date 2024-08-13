@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -17,7 +18,7 @@ import net.nathanthecraziest.spawnersplus.SpawnersPlus;
 public class ModBlocks {
 
     public static final Block INACTIVE_SPAWNER = registerBlock("inactive_spawner",
-            new Block(FabricBlockSettings.of().requiresTool().strength(5.0f).sounds(BlockSoundGroup.METAL).nonOpaque()));
+            new Block(FabricBlockSettings.create().requiresTool().strength(5.0f).sounds(BlockSoundGroup.METAL).nonOpaque()));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
@@ -32,8 +33,5 @@ public class ModBlocks {
 
     public static void registerModBlocks(){
         SpawnersPlus.LOGGER.debug("Registering Mod Blocks for " + SpawnersPlus.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(entries ->
-                entries.addAfter(Items.SPAWNER, INACTIVE_SPAWNER));
     }
 }
