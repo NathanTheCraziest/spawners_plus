@@ -2,16 +2,19 @@ package net.nathanthecraziest.spawnersplus.items;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.enchantment.EnchantmentLevelEntry;
+import net.minecraft.enchantment.EnchantmentTarget;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.nathanthecraziest.spawnersplus.SpawnersPlus;
 import net.nathanthecraziest.spawnersplus.blocks.ModBlocks;
+
+import java.util.EnumSet;
+import java.util.Set;
 
 public class ModItemGroup {
 
@@ -32,6 +35,7 @@ public class ModItemGroup {
                 entries.add(ModItems.WITHER_SKELETON_SOUL);
                 entries.add(ModItems.HUSK_SOUL);
                 entries.add(ModItems.CREEPER_SOUL);
+                entries.add(EnchantedBookItem.forEnchantment(new EnchantmentLevelEntry(ModEnchantments.SOUL_STEALING, 1)));
             })
             .build();
 
