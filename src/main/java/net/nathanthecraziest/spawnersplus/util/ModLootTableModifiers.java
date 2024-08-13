@@ -61,7 +61,7 @@ public class ModLootTableModifiers {
     }
 
     public static void addMobSoulDrop(Item soulItem, float soulDropChance, FabricLootTableBuilder tableBuilder){
-        if(soulDropChance > 0) {
+        if(soulDropChance > 0f) {
             LootPool.Builder poolBuilder = LootPool.builder()
                     .rolls(ConstantLootNumberProvider.create(1))
                     .conditionally(RandomChanceLootCondition.builder(soulDropChance))

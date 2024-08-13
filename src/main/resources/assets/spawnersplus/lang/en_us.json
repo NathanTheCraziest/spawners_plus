@@ -16,5 +16,7 @@
 
   "item.spawnersplus.spawner_silencer": "Spawner Silencer",
 
-  "enchantment.spawnersplus.soul_stealing": "Soul Stealing"
+  "enchantment.spawnersplus.soul_stealing": "Soul Stealing",
+
+  "itemGroup.spawnersplus.itemGroupName": "Spawners+"
 }

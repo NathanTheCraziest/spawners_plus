@@ -1,25 +1,44 @@
 package net.nathanthecraziest.spawnersplus.items;
 
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
+import net.nathanthecraziest.spawnersplus.SpawnersPlus;
 import net.nathanthecraziest.spawnersplus.blocks.ModBlocks;
 
 public class ModItemGroup {
 
+    private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
+            .icon(() -> new ItemStack(ModItems.SPAWNER_FRAGMENT))
+            .displayName(Text.translatable("itemGroup.spawnersplus.itemGroupName"))
+            .entries((context, entries) -> {
+                entries.add(ModBlocks.INACTIVE_SPAWNER);
+                entries.add(ModItems.SPAWNER_FRAGMENT);
+                entries.add(ModItems.SPAWNER_SILENCER);
+                entries.add(ModItems.ZOMBIE_SOUL);
+                entries.add(ModItems.SKELETON_SOUL);
+                entries.add(ModItems.SPIDER_SOUL);
+                entries.add(ModItems.CAVE_SPIDER_SOUL);
+                entries.add(ModItems.BLAZE_SOUL);
+                entries.add(ModItems.MAGMA_CUBE_SOUL);
+                entries.add(ModItems.STRAY_SOUL);
+                entries.add(ModItems.WITHER_SKELETON_SOUL);
+                entries.add(ModItems.HUSK_SOUL);
+                entries.add(ModItems.CREEPER_SOUL);
+            })
+            .build();
+
+
     public static void registerModItemGroups(){
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(content -> {
-            content.addAfter(ModBlocks.INACTIVE_SPAWNER, ModItems.SPAWNER_FRAGMENT);
-            content.addAfter(ModItems.SPAWNER_FRAGMENT, ModItems.SPAWNER_SILENCER);
-            content.addAfter(ModItems.SPAWNER_SILENCER, ModItems.ZOMBIE_SOUL);
-            content.addAfter(ModItems.ZOMBIE_SOUL, ModItems.SKELETON_SOUL);
-            content.addAfter(ModItems.SKELETON_SOUL, ModItems.SPIDER_SOUL);
-            content.addAfter(ModItems.SPIDER_SOUL, ModItems.CAVE_SPIDER_SOUL);
-            content.addAfter(ModItems.CAVE_SPIDER_SOUL, ModItems.BLAZE_SOUL);
-            content.addAfter(ModItems.BLAZE_SOUL, ModItems.MAGMA_CUBE_SOUL);
-            content.addAfter(ModItems.MAGMA_CUBE_SOUL, ModItems.STRAY_SOUL);
-            content.addAfter(ModItems.STRAY_SOUL, ModItems.WITHER_SKELETON_SOUL);
-            content.addAfter(ModItems.WITHER_SKELETON_SOUL, ModItems.HUSK_SOUL);
-            content.addAfter(ModItems.HUSK_SOUL, ModItems.DROWNED_SOUL);
-        });
+        SpawnersPlus.LOGGER.debug("Registering Item Groups for " + SpawnersPlus.MOD_ID);
+
+        Registry.register(Registries.ITEM_GROUP, new Identifier(SpawnersPlus.MOD_ID, "spawnersplus"), ITEM_GROUP);
     }
 }

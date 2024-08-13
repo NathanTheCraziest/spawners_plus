@@ -76,6 +76,11 @@ public class ModSoulItem extends Item {
         return super.useOnBlock(context);
     }
 
+    @Override
+    public boolean hasGlint(ItemStack stack) {
+        return true;
+    }
+
     public ModSoulItem(FabricItemSettings settings, EntityType<?> type) {
         super(settings);
         this.type = type;
