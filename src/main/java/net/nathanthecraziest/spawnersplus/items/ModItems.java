@@ -11,6 +11,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.nathanthecraziest.spawnersplus.SpawnersPlus;
+import net.nathanthecraziest.spawnersplus.items.custom.SpawnerSilencerItem;
 import net.nathanthecraziest.spawnersplus.items.souls.ModSoulItem;
 
 public class ModItems {
@@ -29,7 +30,7 @@ public class ModItems {
     public static final Item DROWNED_SOUL = registerItem("drowned_soul", new ModSoulItem(new FabricItemSettings(), EntityType.DROWNED));
     public static final Item CREEPER_SOUL = registerItem("creeper_soul", new ModSoulItem(new FabricItemSettings(), EntityType.CREEPER));
 
-    public static final Item SPAWNER_SILENCER = registerItem("spawner_silencer", new Item(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
+    public static final Item SPAWNER_SILENCER = registerItem("spawner_silencer", new SpawnerSilencerItem(new FabricItemSettings().rarity(Rarity.UNCOMMON)));
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, new Identifier(SpawnersPlus.MOD_ID, name), item);
     }
