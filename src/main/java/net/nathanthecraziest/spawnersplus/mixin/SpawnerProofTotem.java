@@ -17,6 +17,8 @@ public class SpawnerProofTotem {
 
     @Shadow private int requiredPlayerRange;
 
+    // A
+
     @Inject(method = "isPlayerInRange", at = @At("HEAD"), cancellable = true)
     private void disableSpawnerWithTotem(World world, BlockPos pos, CallbackInfoReturnable<Boolean> cir){
         if(world.isPlayerInRange((double)pos.getX() + 0.5, (double)pos.getY() + 0.5, (double)pos.getZ() + 0.5, (double)this.requiredPlayerRange))

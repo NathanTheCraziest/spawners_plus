@@ -4,9 +4,9 @@
   "package": "net.nathanthecraziest.spawnersplus.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "SpawnerProofTotem"
   ],
   "client": [
-    "SpawnerProofTotem"
   ],
   "injectors": {
     "defaultRequire": 1
