@@ -1,0 +1,26 @@
+{
+  "block.spawnersplus.inactive_spawner": "Aktif Olmayan Canavar Çağırıcı",
+
+  "item.spawnersplus.spawner_fragment": "Canavar Çağırıcı Parçası",
+  "item.spawnersplus.zombie_soul": "Zombi Ruhu",
+  "item.spawnersplus.skeleton_soul": "İskelet Ruhu",
+  "item.spawnersplus.spider_soul": "Örümcek Ruhu",
+  "item.spawnersplus.cave_spider_soul": "Mağara Örümceği Ruhu",
+  "item.spawnersplus.blaze_soul": "Blaze Ruhu",
+  "item.spawnersplus.magma_cube_soul": "Magma Kübü Ruhu",
+  "item.spawnersplus.silverfish_soul": "Gümüşçün Ruhu",
+  "item.spawnersplus.stray_soul": "Serseri Ruhu",
+  "item.spawnersplus.wither_skeleton_soul": "Wither İskeleti Ruhu",
+  "item.spawnersplus.husk_soul": "Zombi Kurusu Ruhu",
+  "item.spawnersplus.drowned_soul": "Boğuk Ruhu",
+  "item.spawnersplus.creeper_soul": "Creeper Ruhu",
+
+  "item.spawnersplus.soul_item_tooltip": "Aktif Olmayan Canavar Çağırıcı'da kullan",
+  "enchantment.spawnersplus.desc": "Bazı yaratıkların öldüklerinde ruh düşürmelerini sağlar",
+  "item.spawnersplus.spawner_silencer": "Canavar Çağırıcı Susturucusu",
+  "item.spawnersplus.spawner_silencer_tooltip": "Tutulduğunda Canavar Çağırıcıları devre dışı bırakır",
+
+  "enchantment.spawnersplus.soul_stealing": "Ruh Çalan",
+
+  "itemGroup.spawnersplus.itemGroupName": "Spawners+"
+}

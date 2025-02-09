@@ -13,8 +13,14 @@
   "item.spawnersplus.wither_skeleton_soul": "Wither Skeleton Soul",
   "item.spawnersplus.husk_soul": "Husk Soul",
   "item.spawnersplus.drowned_soul": "Drowned Soul",
+  "item.spawnersplus.creeper_soul": "Creeper Soul",
 
+  "item.spawnersplus.soul_item_tooltip": "Use on an Inactive Spawner",
+  "enchantment.spawnersplus.desc": "Allows some mobs to drop souls on death",
   "item.spawnersplus.spawner_silencer": "Spawner Silencer",
+  "item.spawnersplus.spawner_silencer_tooltip": "Disables Spawners while held",
 
-  "enchantment.spawnersplus.soul_stealing": "Soul Stealing"
+  "enchantment.spawnersplus.soul_stealing": "Soul Stealing",
+
+  "itemGroup.spawnersplus.itemGroupName": "Spawners+"
 }

@@ -5,6 +5,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.MobSpawnerBlockEntity;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -13,7 +14,9 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.MobSpawnerEntry;
@@ -22,6 +25,8 @@ import net.minecraft.world.event.GameEvent;
 import net.nathanthecraziest.spawnersplus.blockentities.mobspawner.ModMobSpawnerLogic;
 import net.nathanthecraziest.spawnersplus.blocks.ModBlocks;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class ModSoulItem extends Item {
 
@@ -74,6 +79,17 @@ public class ModSoulItem extends Item {
         }
 
         return super.useOnBlock(context);
+    }
+
+    @Override
+    public boolean hasGlint(ItemStack stack) {
+        return true;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        tooltip.add(Text.translatable("item.spawnersplus.soul_item_tooltip").formatted(Formatting.GRAY));
+        super.appendTooltip(stack, world, tooltip, context);
     }
 
     public ModSoulItem(FabricItemSettings settings, EntityType<?> type) {
