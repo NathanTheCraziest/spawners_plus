@@ -24,11 +24,22 @@ public class SpawnerProofTotem {
         {
             boolean isPlayerHoldingTotem = false;
             for (PlayerEntity player: world.getPlayers()) {
-                if(world.getClosestPlayer(player, requiredPlayerRange).isHolding(ModItems.SPAWNER_SILENCER)){
-                    isPlayerHoldingTotem = true;
-                }
+                if(world.getClosestPlayer(player, requiredPlayerRange) != null){
+
+                    PlayerEntity closestPlayer = world.getClosestPlayer(player, requiredPlayerRange);
+
+                    if(closestPlayer.isHolding(ModItems.SPAWNER_SILENCER) && player.getEntityWorld() == world){
+
+                        isPlayerHoldingTotem = true;
+
+                    } else cir.setReturnValue(false);
+
+                } else cir.setReturnValue(false);
             }
             cir.setReturnValue(!isPlayerHoldingTotem);
+        }
+        else{
+            cir.setReturnValue(false);
         }
     }
 }
