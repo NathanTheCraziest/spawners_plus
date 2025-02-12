@@ -20,9 +20,11 @@ public class SpawnerProofTotem {
     @Inject(method = "isPlayerInRange", at = @At("HEAD"), cancellable = true)
     private void disableSpawnerWithTotem(World world, BlockPos pos, CallbackInfoReturnable<Boolean> cir){
         cir.cancel();
+
+        boolean disableSpawner = true;
+
         if(world.isPlayerInRange((double)pos.getX() + 0.5, (double)pos.getY() + 0.5, (double)pos.getZ() + 0.5, (double)this.requiredPlayerRange))
         {
-            boolean isPlayerHoldingTotem = false;
             for (PlayerEntity player: world.getPlayers()) {
                 if(world.getClosestPlayer(player, requiredPlayerRange) != null){
 
@@ -30,16 +32,14 @@ public class SpawnerProofTotem {
 
                     if(closestPlayer.isHolding(ModItems.SPAWNER_SILENCER) && player.getEntityWorld() == world){
 
-                        isPlayerHoldingTotem = true;
+                        disableSpawner = false;
 
-                    } else cir.setReturnValue(false);
+                    }
 
-                } else cir.setReturnValue(false);
+                }
             }
-            cir.setReturnValue(!isPlayerHoldingTotem);
         }
-        else{
-            cir.setReturnValue(false);
-        }
+
+        cir.setReturnValue(disableSpawner);
     }
 }
