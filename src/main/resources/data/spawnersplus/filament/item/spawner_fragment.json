@@ -1,0 +1,9 @@
+{
+  "id": "spawnersplus:spawner_fragment",
+  "group": "spawnersplus:spawnersplus",
+  "itemResource": {
+    "models": {
+      "default": "spawnersplus:item/spawner_fragment"
+    }
+  }
+}

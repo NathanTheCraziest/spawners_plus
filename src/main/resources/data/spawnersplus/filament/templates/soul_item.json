@@ -1,0 +1,9 @@
+{
+    "id": "spawnersplus:soul_item",
+    "is_template": true,
+    "properties": {
+        "lore": [
+            "<light_gray><lang:item.spawnersplus.soul_item_tooltip></light_gray>"
+        ]
+    }
+}

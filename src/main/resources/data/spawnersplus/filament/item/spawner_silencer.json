@@ -1,0 +1,14 @@
+{
+  "id": "spawnersplus:spawner_silencer",
+  "group": "spawnersplus:spawnersplus",
+  "itemResource": {
+    "models": {
+      "default": "spawnersplus:item/spawner_silencer"
+    }
+  },
+  "properties": {
+    "lore": [
+      "<light_gray><lang:item.spawnersplus.spawner_silencer_tooltip></light_gray>"
+    ]
+  }
+}
