@@ -1,0 +1,15 @@
+{
+    "id": "spawnersplus:inactive_spawner",
+    "group": "spawnersplus:spawnersplus",
+    "blockResource": {
+        "models": {
+            "default": "spawnersplus:block/inactive_spawner"
+        }
+    },
+    "properties": {
+        "blockBase": "minecraft:spawner",
+        "transparent": true,
+        "destroyTime": 5.0
+    },
+    "blockModelType": "transparent_block"
+}

@@ -5,7 +5,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:stone",
+          "value": "minecraft:stone",
           "conditions": [
             {
               "condition": "minecraft:random_chance",
@@ -14,13 +14,15 @@
             {
               "condition": "minecraft:match_tool",
               "predicate": {
-                "tag": "minecraft:swords",
-                "enchantments": [
-                  {
-                    "enchantment": "spawnersplus:soul_stealing",
-                    "levels": 1
-                  }
-                ]
+                "predicates": {
+                  "minecraft:enchantements": [
+                    {
+                      "enchantment": "spawnersplus:soul_stealing",
+                      "levels": 1
+                    }
+                  ],
+                  "minecraft:items": "#minecraft:swords"
+                }
               }
             }
           ]

@@ -2,17 +2,20 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "spawnersplus:spawner_fragment"
+      "item": "minecraft:powder_snow_bucket"
+    },
+    "S": {
+      "item": "spawnersplus:skeleton_soul"
     }
   },
   "pattern": [
     "###",
-    "# #",
+    "#S#",
     "###"
   ],
   "result": {
     "count": 1,
-    "item": "spawnersplus:inactive_spawner"
+    "id": "spawnersplus:stray_soul"
   },
   "show_notification": true
 }

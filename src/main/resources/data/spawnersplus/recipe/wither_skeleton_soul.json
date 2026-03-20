@@ -2,10 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "spawnersplus:spawner_fragment"
+      "item": "minecraft:nether_star"
     },
     "S": {
-      "item": "minecraft:totem_of_undying"
+      "item": "spawnersplus:skeleton_soul"
     }
   },
   "pattern": [
@@ -15,7 +15,7 @@
   ],
   "result": {
     "count": 1,
-    "item": "spawnersplus:spawner_silencer"
+    "id": "spawnersplus:wither_skeleton_soul"
   },
   "show_notification": true
 }

@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "spawnersplus:inactive_spawner"
+          "value": "spawnersplus:inactive_spawner"
         }
       ],
       "rolls": 1.0

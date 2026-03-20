@@ -1,10 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "spawners_plus",
+  "id": "spawnersplus",
   "version": "${version}",
 
   "name": "Spawners+",
-  "description": "This mod expands mob spawners allowing you to create your own in survival! Inspired by Origin Realms",
+  "description": "This mod expands mob spawners allowing you to create your own in survival! Inspired by Origin Realms. \nTranslation credits:\nRuyaSavascisi\nHuantanhua",
+
+
   "authors": [
     "NathanTheCraziest"
   ],
@@ -19,9 +21,6 @@
   "entrypoints": {
     "main": [
       "net.nathanthecraziest.spawnersplus.SpawnersPlus"
-    ],
-    "client": [
-      "net.nathanthecraziest.spawnersplus.SpawnersPlusClient"
     ]
   },
   "mixins": [
@@ -29,10 +28,11 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.14.19",
-    "fabric-api": "*",
-    "minecraft": ">=1.19.4",
-    "java": ">=17"
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": ">=${fabric_api_version}",
+    "minecraft": ">=${minecraft_version}",
+    "java": ">=21",
+    "filament": "${filament_version}"
   },
   "suggests": {
     "another-mod": "*"
